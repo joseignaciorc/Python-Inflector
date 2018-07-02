@@ -7,7 +7,7 @@
 #
 import unittest
 from inflector import Inflector
-from rules.spanish import Spanish
+from inflector import Spanish
 
 
 class SpanishInflectorTestCase(unittest.TestCase):
