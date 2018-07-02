@@ -3,7 +3,7 @@
 The Inflector is used for getting the plural and singular form of nouns. This piece of code helps on creating code that favors convention over configuration.
 
 Only English, French and Spanish nouns are supported. The English version is a port of Ruby on Rails Inflector, while the Spanish Version has been developed from scratch with the help of Carles Sadurní.
-The French version was implement by [sblondon](https://github.com/sblondon/pluralizefr)
+The French version was implemented by [sblondon](https://github.com/sblondon/pluralizefr).
 
 Apart from converting singulars and plurals, this module also handles necessary string
  conversion for convention based applications like: *tableize*, *urlize*, and so forth.
@@ -35,7 +35,7 @@ Then, to pluralize, run the following code
 'matrices'
 >>> Inflector(French()).pluralize("cheval")
 'chevaux'
->>>Inflector(Spanish()).pluralize("arbol")
+>>> Inflector(Spanish()).pluralize("arbol")
 'arboles'
 ```
 
@@ -58,7 +58,7 @@ Pluralizes nouns.
  * **singularize(word)**
 Singularizes nouns.
 
- * **conditionalPlural(numer_of_records, word)
+ * **conditionalPlural(numer_of_records, word)**
 Returns the plural form of a word if first parameter is greater than 1
 
  * **titleize(word, uppercase = '')**
@@ -118,8 +118,3 @@ version ready to be inserted in friendly URLs
  * **foreignKey(class_name, separate_class_name_and_id_with_underscore = 1)**
 Returns class_name in underscored form, with "_id" tacked on at the end. 
 This is for use in dealing with the database.
-
-
-## Acknowledgement
-
-
