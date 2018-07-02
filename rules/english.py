@@ -7,7 +7,7 @@
 # (BSD-style).
 
 import re
-from base import Base
+from .base import Base
 
 
 class English (Base):

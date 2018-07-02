@@ -17,9 +17,8 @@ class Inflector:
     based on naming conventions like on Ruby on Rails.
     """
 
-    def __init__(self, Inflector=English):
-        assert callable(Inflector), "Inflector should be a callable obj"
-        self.Inflector = apply(Inflector)
+    def __init__(self, Inflector=English()):
+        self.Inflector = Inflector
 
     def pluralize(self, word):
         '''Pluralizes nouns.'''
