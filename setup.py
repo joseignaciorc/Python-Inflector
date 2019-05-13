@@ -9,5 +9,5 @@ setup(name='inflector',
       url='https://github.com/bermi/Python-Inflector',
       author='Bermi Ferrer',
       license='BSD',
-      packages=['inflector'],
+      packages=['inflector','inflector.rules'],
       zip_safe=False)

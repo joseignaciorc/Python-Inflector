@@ -1,1 +1,7 @@
 *.pyc
+build/
+dist/
+inflector.egg-info.DS_Store
+.idea/
+.DS_Store
+inflector.egg-info/

@@ -12,7 +12,7 @@ from .base import Base
 
 class French (Base):
     """
-    Inflector for pluralize and singularize English nouns.
+    Inflector for pluralize and singularize French nouns.
 
     This is the default Inflector for the Inflector obj
     """
@@ -88,18 +88,18 @@ class French (Base):
         return word + "s"
 
     def singularize(self, word):
-        '''Singularizes English nouns.'''
+        '''Singularizes French nouns.'''
 
         word=word.lower()
-
         if word in set(["baux", "coraux", "émaux", "fermaux", "soupiraux", "travaux", "vantaux", "ventaux", "vitraux"]):
             return word[:-3] + "ail"
-        if word.endswith("als") or word.endswith("aux"):
+        if (word.endswith("als") or word.endswith("aux")) and not word.endswith("eaux"):
             return  word[:-3]+"al"
         if word.endswith == "vieux":
             return "vieil"
         if word.endswith("x") or word.endswith("s"):
             return word[:-1]
+        return word
 
 
 
