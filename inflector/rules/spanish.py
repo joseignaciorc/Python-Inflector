@@ -89,7 +89,7 @@ class Spanish (Base):
                 replacement = rule[1]
                 if re.match('\|', replacement):
                     for k in range(1, len(groups)):
-                        replacement = replacement.replace('|' + k, self.string_replace(groups[k - 1], 'ÁÉÍÓÚáéíóú', 'AEIOUaeio'))
+                        replacement = replacement.replace('|' + str(k), self.string_replace(groups[k - 1], 'ÁÉÍÓÚáéíóú', 'AEIOUaeiou'))
 
                 result = re.sub(rule[0], replacement, word)
                 # Esto acentúa los sustantivos que al pluralizarse se
@@ -149,7 +149,7 @@ class Spanish (Base):
                 replacement = rule[1]
                 if re.match('~', replacement):
                     for k in range(1, len(groups)):
-                        replacement = replacement.replace('~' + k, self.string_replace(groups[k - 1], 'AEIOUaeio', 'ÁÉÍÓÚáéíóú'))
+                        replacement = replacement.replace('~' + str(k), self.string_replace(groups[k - 1], 'AEIOUaeiou', 'ÁÉÍÓÚáéíóú'))
 
                 result = re.sub(rule[0], replacement, word)
                 # Esta es una posible solución para el problema de dobles

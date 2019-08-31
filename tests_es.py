@@ -62,20 +62,20 @@ class SpanishInflectorTestCase(unittest.TestCase):
     }
 
     def setUp(self):
-        self.inflector = Inflector(Spanish)
+        self.inflector = Inflector(Spanish())
 
     def tearDown(self):
         self.inflector = None
 
     def test_pluralize(self):
-        for singular, plural in self.singular_to_plural.iteritems():
+        for singular, plural in self.singular_to_plural.items():
             inflector_pluralize = self.inflector.pluralize(singular)
             assert inflector_pluralize == plural, \
                 'Spanish Inflector pluralize(%s) should produce "%s" and NOT "%s"' % (
                     singular, plural, inflector_pluralize)
 
     def test_singularize(self):
-        for singular, plural in self.singular_to_plural.iteritems():
+        for singular, plural in self.singular_to_plural.items():
             inflector_singularize = self.inflector.singularize(plural)
             assert inflector_singularize == singular, \
                 'Spanish Inflector singularize(%s) should produce "%s" and NOT "%s"' % (
